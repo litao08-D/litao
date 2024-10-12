@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米笔记本 - 小米官方网站</title>
+
+
+<link href="css/笔记本.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">小米</div>
+                <ul>
+                    <li><a href="首页.html">首页</a></li>
+                    <li><a href="小米11.html">小米手机</a></li>
+                    <li><a href="红米.html">红米手机</a></li>
+                    <li><a href="电视.html">电视</a></li>
+                    <li><a href="笔记本.html">小米笔记本</a></li>
+                    <li><a href="家电.html">小米家电</a></li>
+                    <li><a href="路由器.html">路由器</a></li>
+                    <li><a href="智能硬件.html">智能硬件</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>小米笔记本 - 为生产力而生</h1>
+            <p>轻薄机身，强劲性能，为您的工作和娱乐带来极致体验</p>
+            <a href="#products" class="btn">立即探索</a>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>热门产品</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="小米笔记本Pro 14">
+                    <div class="product-info">
+                        <h3>小米笔记本Pro 14</h3>
+                        <p>2.5K 120Hz高刷新率屏幕，11代酷睿处理器</p>
+                        <span class="price">￥5499起</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="RedmiBook Pro 15">
+                    <div class="product-info">
+                        <h3>RedmiBook Pro 15</h3>
+                        <p>3.2K 90Hz高刷新率屏幕，RTX 3050 Ti独立显卡</p>
+                        <span class="price">￥5999起</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="小米笔记本Air 13">
+                    <div class="product-info">
+                        <h3>小米笔记本Air 13</h3>
+                        <p>轻薄全金属机身，11代酷睿处理器</p>
+                        <span class="price">￥4999起</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="RedmiBook 14 II">
+                    <div class="product-info">
+                        <h3>RedmiBook 14 II</h3>
+                        <p>全面屏设计，10代酷睿处理器</p>
+                        <span class="price">￥4199起</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="小米游戏本">
+                    <div class="product-info">
+                        <h3>小米游戏本</h3>
+                        <p>15.6英寸大屏，RTX 3060独立显卡</p>
+                        <span class="price">￥7999起</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="小米笔记本Pro X 15">
+                    <div class="product-info">
+                        <h3>小米笔记本Pro X 15</h3>
+                        <p>3.5K OLED屏幕，RTX 3050 Ti独立显卡</p>
+                        <span class="price">￥7999起</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>小米笔记本特色</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <i class="fas fa-laptop"></i>
+                    <h3>轻薄设计</h3>
+                    <p>全金属机身，轻松携带</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-microchip"></i>
+                    <h3>强劲性能</h3>
+                    <p>最新处理器，高效办公</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-battery-full"></i>
+                    <h3>长续航</h3>
+                    <p>大容量电池，持久使用</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-eye"></i>
+                    <h3>护眼屏幕</h3>
+                    <p>低蓝光技术，保护视力</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="cta">
+        <div class="container">
+            <h2>准备好体验小米笔记本了吗？</h2>
+            <p>立即选购，感受科技与艺术的完美融合！</p>
+			<br/>
+            <a href="#products" class="btn">立即购买</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 小米公司 </p>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 产品卡片动画
+        const productCards = document.querySelectorAll('.product-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        productCards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红米手机 - 小米官方网站</title>
+
+
+<link href="css/红米手机.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">小米</div>
+                <ul>
+                    <li><a href="首页.html">首页</a></li>
+                    <li><a href="小米11.html">小米手机</a></li>
+                    <li><a href="红米.html">红米手机</a></li>
+                    <li><a href="电视.html">电视</a></li>
+                    <li><a href="笔记本.html">小米笔记本</a></li>
+                    <li><a href="家电.html">小米家电</a></li>
+                    <li><a href="路由器.html">路由器</a></li>
+                    <li><a href="智能硬件.html">智能硬件</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>红米手机 - 为年轻人而生</h1>
+            <p>高性能，低价格，为年轻人打造的智能手机</p>
+            <a href="#products" class="btn">立即探索</a>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>热门产品</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Redmi Note 11 Pro">
+                    <div class="product-info">
+                        <h3>Redmi Note 11 Pro</h3>
+                        <p>108MP相机，120Hz AMOLED屏幕</p>
+                        <span class="price">￥1799起</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Redmi K50">
+                    <div class="product-info">
+                        <h3>Redmi K50</h3>
+                        <p>天玑8100，2K分辨率直屏</p>
+                        <span class="price">￥2399起</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Redmi 10A">
+                    <div class="product-info">
+                        <h3>Redmi 10A</h3>
+                        <p>6.53英寸大屏幕，5000mAh长续航</p>
+                        <span class="price">￥699起</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Redmi 9A">
+                    <div class="product-info">
+                        <h3>Redmi 9A</h3>
+                        <p>5000mAh大电量，AI人脸解锁</p>
+                        <span class="price">￥599起</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>红米手机特色</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>高性价比</h3>
+                    <p>优质配置，亲民价格</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-battery-full"></i>
+                    <h3>超长续航</h3>
+                    <p>5000mAh大容量电池</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-camera"></i>
+                    <h3>出色相机</h3>
+                    <p>高清摄像，捕捉精彩</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-microchip"></i>
+                    <h3>强劲性能</h3>
+                    <p>高性能处理器，流畅体验</p>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="cta">
+	    <div class="container">
+	        <h2>准备好体验红米手机了吗？</h2>
+	        <p>立即选购，感受科技与艺术的完美融合！</p>
+			<br/>
+	        <a href="#products" class="btn">立即购买</a>
+	    </div>
+	</section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 小米公司 </p>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 产品卡片动画
+        const productCards = document.querySelectorAll('.product-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        productCards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
